@@ -54,15 +54,14 @@ sed -i 's/proc_open,//g' /www/server/php/71/etc/php.ini
 sed -i 's/system,//g' /www/server/php/71/etc/php.ini
 sed -i 's/proc_get_status,//g' /www/server/php/71/etc/php.ini     
 cd /www/wwwroot/${web}/config >/dev/null 2>&1
-wget https://coding.net/u/cvc/p/ssv3mod/git/raw/master/config.zip
-unzip config.zip
+wget --no-check https://raw.githubusercontent.com/suiyuan2012/ziyong/master/config.php
 rm -rf .config.php
 mv config.php .config.php
 sed -i "s/dbname/$mysqlu/g" .config.php
 sed -i "s/dbuser/$mysqlu/g" .config.php
 sed -i "s/dbpass/$mysqlp/g" .config.php
 cd /www/wwwroot/$web/
-wget --no-check https://coding.net/u/cvc/p/ssv3mod/git/raw/master/db.sql
+wget --no-check https://raw.githubusercontent.com/suiyuan2012/ziyong/master/db.sql
 mysql -u$mysqlu -p$mysqlp $mysqlu < db.sql >/dev/null 2>&1
 php composer.phar install
 clear
