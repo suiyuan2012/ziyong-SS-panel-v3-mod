@@ -21,7 +21,7 @@ version='71'
 echo "正在安装fileinfo到服务器......";
 extFile='/www/server/php/70/lib/php/extensions/no-debug-non-zts-20160303/fileinfo.so'
 if [ ! -d "/www/server/php/71/src/ext/fileinfo" ];then
-wget -O ext-71.zip https://coding.net/u/cvc/p/ssrpanel/git/raw/master/ext-71.zip
+wget -O ext-71.zip https://raw.githubusercontent.com/suiyuan2012/ziyong/master/ext-71.zip
 unzip -o ext-71.zip -d /www/server/php/71/ > /dev/null
 rm -f ext-71.zip
 fi
@@ -42,7 +42,7 @@ cd /www/wwwroot/$web
 rm -rf index.html 404.html
 #安装git,unzip工具
 yum install git unzip -y 
-git clone -b master https://github.com/NimaQu/ss-panel-v3-mod_Uim.git tmp && mv tmp/.git . && rm -rf tmp && git reset --hard
+git clone -b dev https://github.com/NimaQu/ss-panel-v3-mod_Uim.git tmp && mv tmp/.git . && rm -rf tmp && git reset --hard
 chown -R root:root *
 chmod -R 755 *
 chown -R www:www storage
