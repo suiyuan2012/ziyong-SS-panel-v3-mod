@@ -1,4 +1,3 @@
-wget https://raw.githubusercontent.com/suiyuan2012/ziyong/master/install.sh; bash install.sh
 1.安装宝塔面面板，PHP版本选择7.1，其他默认，使用Nginx环境。
 
 2.新建站点，记住域名。
@@ -21,7 +20,7 @@ wget https://raw.githubusercontent.com/suiyuan2012/ziyong/master/install.sh; bas
 
 4.运行下面的脚本：
 
-wget https://raw.githubusercontent.com/suiyuan2012/ziyong/master/install.sh; bash install.sh
+      wget https://raw.githubusercontent.com/suiyuan2012/ziyong/master/install.sh; bash install.sh
 
 
 三分钟左右安装完，安装之后没有默认管理员，切换到/www/wwwroot/网站里面去，记住，到根目录即可。然后执行下面一行添加管理员（输入用户名，密码，然后输入Y确认即可）：
