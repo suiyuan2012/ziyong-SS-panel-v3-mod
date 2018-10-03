@@ -42,7 +42,7 @@ cd /www/wwwroot/$web
 rm -rf index.html 404.html
 #安装git,unzip工具
 yum install git unzip -y 
-git clone -b dev https://github.com/NimaQu/ss-panel-v3-mod_Uim.git tmp && mv tmp/.git . && rm -rf tmp && git reset --hard
+git clone -b master https://github.com/NimaQu/ss-panel-v3-mod_Uim.git tmp && mv tmp/.git . && rm -rf tmp && git reset --hard
 chown -R root:root *
 chmod -R 755 *
 chown -R www:www storage
